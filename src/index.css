@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-900: #050510;
+  --color-space-800: #0b0b1a;
+  --color-space-700: #12122b;
+  --color-accent-blue: #00d2ff;
+  --color-accent-orange: #ff5722;
+  --color-accent-red: #ff3333;
+  --color-mars-sand: #b25d38;
+}
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-space-900);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  /* Hide scrollbar for cinematic feel */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Lenis smooth scrolling requires this */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Utilities  */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+}
